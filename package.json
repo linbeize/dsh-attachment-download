@@ -1,0 +1,27 @@
+{
+  "name": "dsh-plugin-attachment-download",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Download a Session's stored attachments from the dsh web GUI: an authenticated /api/attachment.download route plus a Session Header action listing every attachment with one-click save.",
+  "main": "index.mjs",
+  "exports": {
+    ".": {
+      "default": "./index.mjs"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  }
+}
